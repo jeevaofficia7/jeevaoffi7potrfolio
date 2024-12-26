@@ -1,0 +1,557 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+:root {
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+
+body {
+  background: linear-gradient(to top right, black, var(--bg-color), black);
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/*header start*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  margin-bottom: 100px;
+  font-size: 14px;
+}
+
+/*lets style for navlinks*/
+header #navlinks {
+  list-style-type: none;
+  display: flex;
+  column-gap: 40px;
+}
+
+header #navlinks li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+header #navlinks li a:hover {
+  color: deepskyblue;
+}
+
+/*lets style for header logo*/
+#logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/*lets style for heros-section*/
+#hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 30px;
+  padding: 0 10%;
+}
+
+/*style for heading h1*/
+#hero-section #heading-title h1 {
+  font-size: 49px;
+  font-weight: 700;
+  word-spacing: 1px;
+}
+
+/*style for heading h3*/
+#hero-section #heading-title h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #00abf0;
+}
+
+/*style for para*/
+#hero-section p {
+  max-width: 45%;
+  text-align: justify;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/*style for btns container*/
+
+#hero-section #btns-container {
+  display: flex;
+  column-gap: 30px;
+}
+
+#hero-section #btns-container button {
+  padding: 7px 22px;
+  background-color: #00abf0;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: 500;
+  border: 1.5px solid #00abf0;
+  cursor: pointer;
+}
+
+#hero-section #btns-container button:hover {
+  background-color: transparent;
+  color: #00abf0;
+}
+
+/*lets style for social-icons*/
+
+#social-icons {
+  display: flex;
+  list-style-type: none;
+  column-gap: 30px;
+  font-size: 16px;
+  margin-top: 70px;
+}
+
+#social-icons li i {
+  color: #00abf0;
+  border: 1px solid #00abf0;
+  padding: 13px;
+  background-color: rgba(0, 0, 0, 0.685);
+  border-radius: 30px;
+}
+
+#social-icons li:hover i {
+  color: white;
+  background-color: #00abf0;
+  scale: 1.3;
+  box-shadow: 0 0 10px 2px #00abf0;
+  transition: all 0.5s linear;
+}
+
+/*dropdwon*/
+
+#skills-ul {
+  position: absolute;
+  list-style-type: none;
+  font-size: 13px;
+  display: flex;
+  top: 20px;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 30px;
+  margin-left: 5px;
+  display: none; /*default display none*/
+}
+
+#skills-ul i {
+  margin-left: 5px;
+}
+
+#navlinks li:nth-child(3):hover #skills-ul {
+  display: flex;
+}
+
+/*skill ul i color of seperate*/
+#skills-ul .fa-html5 {
+  color: orange;
+}
+
+#skills-ul .fa-css3 {
+  color: blue;
+}
+
+#skills-ul .fa-js {
+  color: yellow;
+}
+
+@keyframes forIcons {
+  from {
+    transform: 0;
+  }
+
+  to {
+    transform: rotate(20000deg);
+    font-size: 18px;
+  }
+}
+
+/*js funtion styling*/
+.icons-funtion {
+  animation: forIcons 1s linear;
+}
+
+/*style for hero section img div*/
+#image-div {
+  position: absolute;
+  top: 160px;
+  right: 100px;
+  box-shadow: 2px 10px 150px 10px deepskyblue;
+  border-radius: 10px;
+  background-color: black;
+}
+/*style for hero section img */
+#image-div img {
+  object-fit: cover;
+  background-size: cover;
+  background-position-y: center;
+  height: 280px;
+  width: 280px;
+  padding: 10px 0px;
+  flex-grow: 1;
+}
+
+/*style for about section*/
+#about-section {
+  margin-top: 50px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images/business-suit-brain-1920x1080-16430.jpg);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 5%;
+  row-gap: 20px;
+  gap: 30px;
+  
+}
+
+#about-section p {
+  max-width: 80%;
+  text-align: center;
+  font-size: 13px;
+}
+
+#about-section h1 {
+  font-size: 30px;
+}
+
+#about-section img {
+  border-radius: 500px;
+  height: 240px;
+  width: 240px;
+  background-size: contain;
+  padding: 5px;
+  object-fit: cover;
+}
+
+#about-section button {
+  padding: 8px 14px;
+  background-color: #00abf0;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid #00abf0;
+  cursor: pointer;
+  outline: none;
+}
+
+#about-section span {
+  color: var(--main-color);
+}
+
+#about-section #btns-container2 {
+  display: flex;
+  gap: 20px;
+}
+
+#about-section button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+#skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#skills-container #skills-about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+  column-gap: 80px;
+  margin: 30px 0;
+  font-size: 100px;
+}
+
+#skills-about .fa-html5 {
+  color: orangered;
+}
+
+#skills-about .fa-css3 {
+  color: blue;
+}
+
+#skills-about .fa-js {
+  color: yellow;
+}
+
+/*style for interesr section*/
+
+#interest-section img {
+  height: 220px;
+  width: 90%;
+  object-fit: cover;
+  flex-grow: 1;
+}
+
+#interest-section article {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+#interest-section h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 30px;
+}
+
+/*contact-secction*/
+
+#contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+  width: 800px;
+  padding: 50px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images/code-in-dark-aesthetic-144ld4j7cw2hmlqp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-size: co;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images/flat-lay-workstation-with-copy-space-laptop_23-2148430879.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 800px;
+  padding: 50px 30px;
+  margin: 50px 0;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  width: 500px;
+  background-color: rgb(39, 39, 39);
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+textarea {
+  width: 500px;
+  padding: 10px 0;
+  background-color: #222;
+  color: white;
+}
+
+form button {
+  width: 500px;
+  padding: 10px;
+  background-color: red;
+  border: none;
+  color: white;
+  font-weight: 500;
+}
+
+#contact-info {
+  text-align: center;
+}
+
+/*style for footer*/
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+/*media queries*/
+
+#hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  #hamburger {
+    display: flex;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 25px;
+  }
+
+  #navlinks {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    row-gap: 30px;
+    margin: 50px 0;
+    position: absolute;
+    left: -150px;
+    top: 50px;
+  }
+
+ 
+  #skills-ul li {
+    display: none;
+  }
+
+  #navlinks.ul-active {
+    display: flex;
+    left: 20px;
+    transition: 0.5s linear left;
+  }
+
+  /*style for heros-section*/
+
+  #hero-section {
+    position: relative;
+    top: 250px;
+  }
+
+
+
+  #hero-section #image-div img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+
+  #hero-section h1 {
+    font-size: 30px;
+  }
+
+  #hero-section{
+    margin-bottom: 300px;
+  }
+
+
+  #hero-section #heading-title h1{
+    font-size: 35px;
+  }
+
+  #hero-section #heading-title h3{
+    font-size: 25px;
+  }
+  
+  #hero-section p{
+    min-width: 100%;
+  }
+
+  #hero-section img{
+    display: none;
+  }
+
+  /*style for about section*/
+
+
+  #about-section{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/business-suit-brain-1920x1080-16430.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+  }
+
+  #about-section p{
+
+    max-width: 100%;
+    font-size: 12px;
+  }
+
+  #skills-container #skills-about{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  #skills-container #skills-about i{
+    font-size: 50px;
+  }
+
+/*style for interest section*/
+
+#interest-section article{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 30px;
+}
+
+  #contact-section form input,textarea{
+    max-width: 300px;
+  }
+
+  form button{
+    width: 300px;
+  }
+
+  #contact-section form{
+    width: 100%;
+  }
+
+  #contact-section h1{
+    font-size: 25px;
+  }
+
+  #contact-section p{
+    text-align: center;
+    font-size: 12px;
+   
+  }
+   
+  footer{
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 30px;
+  }
+
+  footer ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  address{
+    text-align: center;
+  }
+
+  
+}

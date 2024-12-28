@@ -146,7 +146,8 @@ header #navlinks li a:hover {
   row-gap: 10px;
   margin-top: 30px;
   margin-left: 5px;
-  display: none; /*default display none*/
+  display: none;
+  /*default display none*/
 }
 
 #skills-ul i {
@@ -210,7 +211,7 @@ header #navlinks li a:hover {
 #about-section {
   margin-top: 50px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(images/business-suit-brain-1920x1080-16430.jpg);
+  url(images/business-suit-brain-1920x1080-16430.jpg);
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -221,7 +222,6 @@ header #navlinks li a:hover {
   padding: 50px 5%;
   row-gap: 20px;
   gap: 30px;
-  
 }
 
 #about-section p {
@@ -328,7 +328,7 @@ header #navlinks li a:hover {
   width: 800px;
   padding: 50px 20px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(images/code-in-dark-aesthetic-144ld4j7cw2hmlqp.jpg);
+  url(images/code-in-dark-aesthetic-144ld4j7cw2hmlqp.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -342,7 +342,7 @@ form {
   align-items: center;
   gap: 20px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(images/flat-lay-workstation-with-copy-space-laptop_23-2148430879.avif);
+  url(images/flat-lay-workstation-with-copy-space-laptop_23-2148430879.avif);
   background-repeat: no-repeat;
   background-size: cover;
   width: 800px;
@@ -415,6 +415,7 @@ footer ul {
     left: 10px;
     top: 10px;
     font-size: 25px;
+    z-index: 10;
   }
 
   #navlinks {
@@ -422,22 +423,47 @@ footer ul {
     flex-direction: column;
     text-align: justify;
     row-gap: 30px;
-    margin: 50px 0;
-    position: absolute;
-    left: -150px;
-    top: 50px;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 200px;
+    height: 100vh;
+    padding: 80px 20px;
+    transition: all 0.50s ease;
+    background-color: #112e42;
+    opacity: 0;
+    z-index: 9;
   }
 
- 
   #skills-ul li {
     display: none;
   }
 
   #navlinks.ul-active {
     display: flex;
-    left: 20px;
+    left: 0;
     transition: 0.5s linear left;
+    opacity: 1;
   }
+
+  #navlinks li a {
+    display: block;
+    width: inherit;
+
+  }
+
+  #navlinks li:hover {
+    background-color: #333;
+  }
+
+  #hamburger.x-mark {
+
+
+    font-size: 20px;
+    transition: 0.50s ease;
+
+  }
+
 
   /*style for heros-section*/
 
@@ -445,8 +471,6 @@ footer ul {
     position: relative;
     top: 250px;
   }
-
-
 
   #hero-section #image-div img {
     height: 200px;
@@ -458,100 +482,94 @@ footer ul {
     font-size: 30px;
   }
 
-  #hero-section{
+  #hero-section {
     margin-bottom: 300px;
   }
 
-
-  #hero-section #heading-title h1{
+  #hero-section #heading-title h1 {
     font-size: 35px;
   }
 
-  #hero-section #heading-title h3{
+  #hero-section #heading-title h3 {
     font-size: 25px;
   }
-  
-  #hero-section p{
+
+  #hero-section p {
     min-width: 100%;
   }
 
-  #hero-section img{
+  #hero-section img {
     display: none;
   }
 
   /*style for about section*/
 
-
-  #about-section{
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/business-suit-brain-1920x1080-16430.jpg);
+  #about-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images/business-suit-brain-1920x1080-16430.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
     background-attachment: fixed;
   }
 
-  #about-section p{
-
+  #about-section p {
     max-width: 100%;
     font-size: 12px;
   }
 
-  #skills-container #skills-about{
+  #skills-container #skills-about {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  #skills-container #skills-about i{
+  #skills-container #skills-about i {
     font-size: 50px;
   }
 
-/*style for interest section*/
+  /*style for interest section*/
 
-#interest-section article{
-  display: grid;
-  grid-template-columns: repeat(1,1fr);
-  gap: 30px;
-}
-
-  #contact-section form input,textarea{
-    max-width: 300px;
-  }
-
-  form button{
-    width: 300px;
-  }
-
-  #contact-section form{
-    width: 100%;
-  }
-
-  #contact-section h1{
-    font-size: 25px;
-  }
-
-  #contact-section p{
-    text-align: center;
-    font-size: 12px;
-   
-  }
-   
-  footer{
-    font-size: 15px;
+  #interest-section article {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 30px;
   }
 
-  footer ul{
+  #contact-section form input,
+  textarea {
+    max-width: 300px;
+  }
+
+  form button {
+    width: 300px;
+  }
+
+  #contact-section form {
+    width: 100%;
+  }
+
+  #contact-section h1 {
+    font-size: 25px;
+  }
+
+  #contact-section p {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  footer ul {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
-
-  address{
+  address {
     text-align: center;
   }
-
-  
 }

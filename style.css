@@ -146,8 +146,7 @@ header #navlinks li a:hover {
   row-gap: 10px;
   margin-top: 30px;
   margin-left: 5px;
-  display: none;
-  /*default display none*/
+  display: none; /*default display none*/
 }
 
 #skills-ul i {
@@ -211,7 +210,7 @@ header #navlinks li a:hover {
 #about-section {
   margin-top: 50px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url(images/business-suit-brain-1920x1080-16430.jpg);
+    url(images/business-suit-brain-1920x1080-16430.jpg);
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -328,7 +327,7 @@ header #navlinks li a:hover {
   width: 800px;
   padding: 50px 20px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url(images/code-in-dark-aesthetic-144ld4j7cw2hmlqp.jpg);
+    url(images/code-in-dark-aesthetic-144ld4j7cw2hmlqp.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -342,7 +341,7 @@ form {
   align-items: center;
   gap: 20px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url(images/flat-lay-workstation-with-copy-space-laptop_23-2148430879.avif);
+    url(images/flat-lay-workstation-with-copy-space-laptop_23-2148430879.avif);
   background-repeat: no-repeat;
   background-size: cover;
   width: 800px;
@@ -402,7 +401,7 @@ footer ul {
   display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   header {
     display: flex;
     flex-direction: column;
@@ -423,16 +422,17 @@ footer ul {
     flex-direction: column;
     text-align: justify;
     row-gap: 30px;
+    margin: 50px 0;
     position: fixed;
-    top: 0;
-    left: -300px;
-    width: 200px;
+    top: -50px;
+    left: -550px;
+    background-color: #222;
     height: 100vh;
-    padding: 80px 20px;
-    transition: all 0.50s ease;
-    background-color: #112e42;
-    opacity: 0;
+    width: 200px;
+    padding-top: 100px;
+    padding-left: 20px;
     z-index: 9;
+    opacity: 1;
   }
 
   #skills-ul li {
@@ -441,29 +441,13 @@ footer ul {
 
   #navlinks.ul-active {
     display: flex;
-    left: 0;
+    left: 0px;
     transition: 0.5s linear left;
-    opacity: 1;
   }
 
-  #navlinks li a {
-    display: block;
-    width: inherit;
-
+  .ul-active.move {
+    margin-left: 200px;
   }
-
-  #navlinks li:hover {
-    background-color: #333;
-  }
-
-  #hamburger.x-mark {
-
-
-    font-size: 20px;
-    transition: 0.50s ease;
-
-  }
-
 
   /*style for heros-section*/
 
@@ -506,7 +490,7 @@ footer ul {
 
   #about-section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(images/business-suit-brain-1920x1080-16430.jpg);
+      url(images/business-suit-brain-1920x1080-16430.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -569,7 +553,29 @@ footer ul {
     flex-direction: column;
     align-items: center;
   }
+
   address {
     text-align: center;
+  }
+}
+
+/*media query for tablet screen*/
+
+@media screen and (max-width: 900px) {
+  #hero-section img {
+    display: none;
+  }
+
+  #hero-section p {
+    max-width: 80%;
+  }
+
+  #contact-section form {
+    max-width: 50%;
+    background: none;
+  }
+
+  footer {
+    font-size: 15px;
   }
 }

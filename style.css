@@ -20,7 +20,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/header start/
+/*header start*/
 header {
   display: flex;
   justify-content: space-between;
@@ -30,7 +30,7 @@ header {
   font-size: 14px;
 }
 
-/lets style for navlinks/
+/*lets style for navlinks*/
 header #navlinks {
   list-style-type: none;
   display: flex;
@@ -46,7 +46,7 @@ header #navlinks li a:hover {
   color: deepskyblue;
 }
 
-/lets style for header logo/
+/*lets style for header logo*/
 #logo a {
   text-decoration: none;
   color: white;
@@ -54,7 +54,7 @@ header #navlinks li a:hover {
   font-weight: 600;
 }
 
-/lets style for heros-section/
+/*lets style for heros-section*/
 #hero-section {
   display: flex;
   flex-direction: column;
@@ -63,21 +63,21 @@ header #navlinks li a:hover {
   padding: 0 10%;
 }
 
-/style for heading h1/
+/*style for heading h1*/
 #hero-section #heading-title h1 {
   font-size: 49px;
   font-weight: 700;
   word-spacing: 1px;
 }
 
-/style for heading h3/
+/*style for heading h3*/
 #hero-section #heading-title h3 {
   font-size: 30px;
   font-weight: 600;
   color: #00abf0;
 }
 
-/style for para/
+/*style for para*/
 #hero-section p {
   max-width: 45%;
   text-align: justify;
@@ -85,7 +85,7 @@ header #navlinks li a:hover {
   line-height: 1.8;
 }
 
-/style for btns container/
+/*style for btns container*/
 
 #hero-section #btns-container {
   display: flex;
@@ -108,7 +108,7 @@ header #navlinks li a:hover {
   color: #00abf0;
 }
 
-/lets style for social-icons/
+/*lets style for social-icons*/
 
 #social-icons {
   display: flex;
@@ -134,7 +134,7 @@ header #navlinks li a:hover {
   transition: all 0.5s linear;
 }
 
-/dropdwon/
+/*dropdwon*/
 
 #skills-ul {
   position: absolute;
@@ -146,7 +146,7 @@ header #navlinks li a:hover {
   row-gap: 10px;
   margin-top: 30px;
   margin-left: 5px;
-  display: none; /default display none/
+  display: none; /*default display none*/
 }
 
 #skills-ul i {
@@ -157,7 +157,7 @@ header #navlinks li a:hover {
   display: flex;
 }
 
-/skill ul i color of seperate/
+/*skill ul i color of seperate*/
 #skills-ul .fa-html5 {
   color: orange;
 }
@@ -181,12 +181,12 @@ header #navlinks li a:hover {
   }
 }
 
-/js funtion styling/
+/*js funtion styling*/
 .icons-funtion {
   animation: forIcons 1s linear;
 }
 
-/style for hero section img div/
+/*style for hero section img div*/
 #image-div {
   position: absolute;
   top: 160px;
@@ -206,7 +206,7 @@ header #navlinks li a:hover {
   flex-grow: 1;
 }
 
-/style for about section/
+/*style for about section*/
 #about-section {
   margin-top: 50px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -294,7 +294,7 @@ header #navlinks li a:hover {
   color: yellow;
 }
 
-/style for interesr section/
+/*style for interesr section*/
 
 #interest-section img {
   height: 220px;
@@ -317,7 +317,7 @@ header #navlinks li a:hover {
   font-size: 30px;
 }
 
-/contact-secction/
+/*contact-secction*/
 
 #contact-section {
   display: flex;
@@ -382,7 +382,7 @@ form button {
   text-align: center;
 }
 
-/style for footer/
+/*style for footer*/
 
 footer {
   display: grid;
@@ -395,13 +395,13 @@ footer ul {
   list-style-type: none;
 }
 
-/media queries/
+/*media queries*/
 
 #hamburger {
   display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   header {
     display: flex;
     flex-direction: column;
@@ -414,6 +414,7 @@ footer ul {
     left: 10px;
     top: 10px;
     font-size: 25px;
+    z-index: 10;
   }
 
   #navlinks {
@@ -422,9 +423,16 @@ footer ul {
     text-align: justify;
     row-gap: 30px;
     margin: 50px 0;
-    position: absolute;
-    left: -150px;
-    top: 50px;
+    position: fixed;
+    top: -50px;
+    left: -550px;
+    background-color: #222;
+    height: 100vh;
+    width: 300px;
+    padding-top: 100px;
+    padding-left: 20px;
+    z-index: 9;
+    opacity: 1;
   }
 
   #skills-ul li {
@@ -433,11 +441,11 @@ footer ul {
 
   #navlinks.ul-active {
     display: flex;
-    left: 20px;
+    left: 0px;
     transition: 0.5s linear left;
   }
 
-  /style for heros-section/
+  /*style for heros-section*/
 
   #hero-section {
     position: relative;
@@ -474,7 +482,7 @@ footer ul {
     display: none;
   }
 
-  /style for about section/
+  /*style for about section*/
 
   #about-section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -499,7 +507,7 @@ footer ul {
     font-size: 50px;
   }
 
-  /style for interest section/
+  /*style for interest section*/
 
   #interest-section article {
     display: grid;
@@ -546,3 +554,45 @@ footer ul {
     text-align: center;
   }
 }
+
+/*media query for tablet screen*/
+
+@media screen and (max-width: 900px) {
+  #hero-section img {
+    display: none;
+  }
+
+  #hero-section p {
+    max-width: 80%;
+  }
+
+  #contact-section form {
+    max-width: 50%;
+    background: none;
+  }
+
+  footer {
+    font-size: 15px;
+  }
+
+  #resume-download {
+    display: none;
+  }
+}
+
+/*resume*/
+
+#resume-download button a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+#resume-download button {
+  padding: 8px 12px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  background-color: #112e42;
+}
+

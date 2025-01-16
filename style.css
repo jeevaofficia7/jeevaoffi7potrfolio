@@ -1,625 +1,548 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
-:root {
-  --main-font: "Roboto", sans-serif;
-  --secondary-font: "Poppins", sans-serif;
-  --primary-color: #222;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: var(--main-font);
   box-sizing: border-box;
-  outline: 1px solid red;
+  font-family: "Poppins", serif;
 }
 
-section h1 {
-  font-weight: 500;
+:root {
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
 }
 
-/*hamburger*/
-
-#hamburger {
-  display: none;
+body {
+  background: linear-gradient(to top right, black, var(--bg-color), black);
+  color: white;
+  scroll-behavior: smooth;
 }
 
-#hamburger .lines {
-  height: 3px;
-  width: 28px;
-  display: block;
-  background-color: black;
-  margin-top: 5px;
-  border-radius: 50px;
-  font-weight: 400;
-}
-
-img {
-  cursor: pointer;
-}
-img:hover {
-  scale: 1.05;
-  transition: all 0.5s linear;
-}
-
-.fa-search {
-  color: black;
-}
-
-/*style for header*/
+/header start/
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 5%;
-  background-color: whitesmoke;
-  color: black;
-  position: relative;
-  font-weight: 500;
-  font-size: 13px;
-  top: 0;
-  z-index: 10;
+  padding: 10px 50px;
+  margin-bottom: 100px;
+  font-size: 14px;
 }
-/*style for navlinks or ul*/
+
+/lets style for navlinks/
 header #navlinks {
   list-style-type: none;
   display: flex;
-  column-gap: 50px;
-  align-items: center;
-  font-size: 20px;
-}
-
-nav {
-  position: absolute;
-  right: 240px;
+  column-gap: 40px;
 }
 
 header #navlinks li a {
   text-decoration: none;
-  color: #222;
-  font-size: 14px;
+  color: whitesmoke;
 }
 
-header button {
-  padding: 10px 15px;
-  border: none;
-  background-color: #222;
-  color: white;
-  font-weight: 500;
-}
-
-/*style for search container*/
-#search-container {
-  display: flex;
-  position: relative;
-  align-items: center;
-  position: absolute;
-  left: 250px;
-}
-
-#search-container input {
-  padding: 9px 12px;
-  border: none;
-  outline: none;
-  width: 170px;
-  border-radius: 30px;
-  background-color: white;
-  color: black;
-}
-
-.fa-search {
-  position: absolute;
-  right: 20px;
-  color: black;
-  font-size: 13px;
-}
-
-header span {
+header #navlinks li a:hover {
   color: deepskyblue;
 }
 
-#options {
-  display: flex;
-  column-gap: 30px;
-  font-size: 16px;
-}
-
-.fa-heart {
-  color: red;
-}
-
-/*style for hero section*/
-
-#hero-section {
-  position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(images/model7.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+/lets style for header logo/
+#logo a {
+  text-decoration: none;
   color: white;
+  font-size: 26px;
+  font-weight: 600;
 }
 
-#hero-section #hero-contents {
+/lets style for heros-section/
+#hero-section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  row-gap: 20px;
-  padding: 120px 10%;
+  row-gap: 30px;
+  padding: 0 10%;
 }
 
-#hero-section #hero-contents h1 {
-  font-size: 45px;
-  line-height: 1.5;
+/style for heading h1/
+#hero-section #heading-title h1 {
+  font-size: 49px;
+  font-weight: 700;
+  word-spacing: 1px;
 }
 
-#hero-section #hero-contents p {
-  color: lightgoldenrodyellow;
-  font-size: 14px;
+/style for heading h3/
+#hero-section #heading-title h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #00abf0;
 }
 
-#hero-section #hero-contents button {
+/style for para/
+#hero-section p {
+  max-width: 45%;
+  text-align: justify;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/style for btns container/
+
+#hero-section #btns-container {
+  display: flex;
+  column-gap: 30px;
+}
+
+#hero-section #btns-container button {
+  padding: 7px 22px;
+  background-color: #00abf0;
   border: none;
-  padding: 15px;
+  outline: none;
+  border-radius: 5px;
+  font-weight: 500;
+  border: 1.5px solid #00abf0;
+  cursor: pointer;
+}
+
+#hero-section #btns-container button:hover {
+  background-color: transparent;
+  color: #00abf0;
+}
+
+/lets style for social-icons/
+
+#social-icons {
+  display: flex;
+  list-style-type: none;
+  column-gap: 30px;
+  font-size: 16px;
+  margin-top: 70px;
+}
+
+#social-icons li i {
+  color: #00abf0;
+  border: 1px solid #00abf0;
+  padding: 13px;
+  background-color: rgba(0, 0, 0, 0.685);
+  border-radius: 30px;
+}
+
+#social-icons li:hover i {
+  color: white;
+  background-color: #00abf0;
+  scale: 1.3;
+  box-shadow: 0 0 10px 2px #00abf0;
+  transition: all 0.5s linear;
+}
+
+/dropdwon/
+
+#skills-ul {
+  position: absolute;
+  list-style-type: none;
+  font-size: 13px;
+  display: flex;
+  top: 20px;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 30px;
+  margin-left: 5px;
+  display: none; /default display none/
+}
+
+#skills-ul i {
+  margin-left: 5px;
+}
+
+#navlinks li:nth-child(3):hover #skills-ul {
+  display: flex;
+}
+
+/skill ul i color of seperate/
+#skills-ul .fa-html5 {
+  color: orange;
+}
+
+#skills-ul .fa-css3 {
+  color: blue;
+}
+
+#skills-ul .fa-js {
+  color: yellow;
+}
+
+@keyframes forIcons {
+  from {
+    transform: 0;
+  }
+
+  to {
+    transform: rotate(20000deg);
+    font-size: 18px;
+  }
+}
+
+/js funtion styling/
+.icons-funtion {
+  animation: forIcons 1s linear;
+}
+
+/style for hero section img div/
+#image-div {
+  position: absolute;
+  top: 160px;
+  right: 100px;
+  box-shadow: 2px 10px 150px 10px deepskyblue;
+  border-radius: 10px;
+  background-color: black;
+}
+/*style for hero section img */
+#image-div img {
+  object-fit: cover;
+  background-size: cover;
+  background-position-y: center;
+  height: 280px;
+  width: 280px;
+  padding: 10px 0px;
+  flex-grow: 1;
+}
+
+/style for about section/
+#about-section {
+  margin-top: 50px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images/business-suit-brain-1920x1080-16430.jpg);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 5%;
+  row-gap: 20px;
+  gap: 30px;
+}
+
+#about-section p {
+  max-width: 80%;
+  text-align: center;
+  font-size: 13px;
+}
+
+#about-section h1 {
+  font-size: 30px;
+}
+
+#about-section img {
+  border-radius: 500px;
+  height: 240px;
+  width: 240px;
+  background-size: contain;
+  padding: 5px;
+  object-fit: cover;
+}
+
+#about-section button {
+  padding: 8px 14px;
+  background-color: #00abf0;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid #00abf0;
+  cursor: pointer;
+  outline: none;
+}
+
+#about-section span {
+  color: var(--main-color);
+}
+
+#about-section #btns-container2 {
+  display: flex;
+  gap: 20px;
+}
+
+#about-section button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+#skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#skills-container #skills-about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+  column-gap: 80px;
+  margin: 30px 0;
+  font-size: 100px;
+}
+
+#skills-about .fa-html5 {
+  color: orangered;
+}
+
+#skills-about .fa-css3 {
+  color: blue;
+}
+
+#skills-about .fa-js {
+  color: yellow;
+}
+
+/style for interesr section/
+
+#interest-section img {
+  height: 220px;
+  width: 90%;
+  object-fit: cover;
+  flex-grow: 1;
+}
+
+#interest-section article {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+#interest-section h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 30px;
+}
+
+/contact-secction/
+
+#contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+  width: 800px;
+  padding: 50px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images/code-in-dark-aesthetic-144ld4j7cw2hmlqp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-size: co;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images/flat-lay-workstation-with-copy-space-laptop_23-2148430879.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 800px;
+  padding: 50px 30px;
+  margin: 50px 0;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  width: 500px;
+  background-color: rgb(39, 39, 39);
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+textarea {
+  width: 500px;
+  padding: 10px 0;
   background-color: #222;
   color: white;
 }
 
-#hero-section #content-buttons {
-  display: flex;
-  column-gap: 20px;
-}
-
-/*logo section*/
-
-#brands-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 60px;
-  margin: 50px 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(images/model11.jpg);
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
-  padding: 50px;
-}
-
-#brands-section #brands-contents {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 15px;
-}
-
-#brands-section #brands-contents h1 {
-  font-size: 40px;
+form button {
+  width: 500px;
+  padding: 10px;
+  background-color: red;
+  border: none;
   color: white;
-  font-weight: 400;
-}
-#brands-section #brands-contents p {
-  color: lightgoldenrodyellow;
-  font-weight: 300;
-}
-
-#brands-section #brand-logos figure img {
-  height: 100%;
-  width: 150px;
-  object-fit: contain;
-}
-
-#brand-logos figure {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  column-gap: 100px;
-  overflow-x: hidden;
-}
-
-/*key fraames for logos*/
-
-/*style for  fashion section*/
-#fashion-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 60px;
-}
-
-#fashion-section #fashion-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 15px;
-}
-
-#fashion-content h1 {
-  font-size: 30px;
-}
-
-#fashion-content p {
-  color: darkgoldenrod;
-}
-
-/*fashion images*/
-#fashion-images img {
-  height: 30rem;
-  width: 350px;
-  border-radius: 5px;
-  object-fit: cover;
-}
-
-#fashion-images {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: start;
-  column-gap: 50px;
-}
-
-/*style for casual top wear*/
-
-#casual-section {
-  display: flex;
-  flex-direction: column;
-  row-gap: 100px;
-  margin: 80px 0;
-  padding: 0 9%;
-}
-
-#casual-section #casual-contents {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  row-gap: 15px;
-}
-
-#casual-section #casual-contents h1 {
-  font-size: 35px;
-}
-
-#casual-section #casual-contents p {
-  color: darkgoldenrod;
-}
-
-#casual-contents button {
-  padding: 15px 20px;
-  border: none;
-}
-
-#casual-images img {
-  height: 300px;
-  width: 300px;
-  object-fit: cover;
-}
-
-#casual-images {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-content: space-evenly;
-  column-gap: 100px;
-  overflow-x: auto;
-}
-
-#casual-images article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 10px;
-  padding: 20px 0;
-  font-weight: 500;
-  font-size: 13px;
-}
-
-#casual-images article button {
-  padding: 10px;
-  font-size: 12px;
-  border: none;
-}
-
-/*bottom-wear section*/
-#bottom-wear {
-  display: flex;
-  flex-direction: column;
-  row-gap: 100px;
-  padding: 0 9%;
-}
-
-#bottomwear-contents {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  row-gap: 15px;
-}
-
-#bottomwear-contents h1 {
-  font-size: 35px;
-}
-
-#bottomwear-contents p {
-  color: darkgoldenrod;
-}
-
-#bottomwear-contents button {
-  padding: 15px 20px;
-  border: none;
-}
-
-#bottomwear-container img {
-  height: 350px;
-  width: 300px;
-  object-fit: cover;
-}
-
-#bottomwear-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-content: space-evenly;
-  column-gap: 100px;
-  overflow-x: scroll;
-}
-
-/*footwear section*/
-
-#footwear {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  row-gap: 60px;
-  margin: 50px 0;
-  padding: 0 9%;
-}
-
-#footwear-contents {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  row-gap: 20px;
-}
-
-#footwear-contents h1 {
-  font-size: 35px;
-}
-
-#footwear-contents p {
-  color: darkgoldenrod;
-}
-
-#footwear-contents button {
-  padding: 15px 20px;
-  border: none;
-}
-
-#footwear-container article img {
-  height: 250px;
-  width: 300px;
-  object-fit: cover;
-}
-
-#footwear-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-content: space-evenly;
-  justify-items: center;
-  width: 100%;
-  align-items: center;
-  column-gap: 100px;
-  overflow-x: scroll;
-}
-
-#footwear-container article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 10px;
-  padding: 20px 0;
   font-weight: 500;
 }
 
-#footwear article button {
-  padding: 10px;
-  font-size: 12px;
-  border: none;
+#contact-info {
+  text-align: center;
 }
+
+/style for footer/
 
 footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
-  width: 100%;
-  margin-top: 200px;
-  background: linear-gradient(to right, black, #222);
-  color: white;
-  padding: 50px 0;
-  position: relative;
 }
 
 footer ul {
   list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  row-gap: 10px;
-  padding: 30px 0;
-  font-size: 14px;
 }
 
-footer ul li a {
-  text-decoration: none;
-  color: white;
+/media queries/
+
+#hamburger {
+  display: none;
 }
 
-#social-links ul {
-  display: flex;
-  flex-direction: row;
-  column-gap: 20px;
-  font-size: 20px;
-}
-
-#social-links ul li i {
-  background-color: white;
-  padding: 5px;
-  border-radius: 50px;
-}
-
-/*individuals styling social.icons*/
-
-.fa-facebook {
-  color: deepskyblue;
-}
-.fa-whatsapp {
-  color: limegreen;
-}
-
-.fa-instagram {
-  color: deeppink;
-}
-
-.fa-twitter {
-  color: dodgerblue;
-}
-
-/*copyright*/
-#copyright {
-  position: absolute;
-  right: 30%;
-  transform: translate(-50%);
-  bottom: 20px;
-  font-size: 13px;
-}
-
-/*responsive*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   header {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    height: 60px;
     position: relative;
   }
 
-  #search-container input {
-    display: none;
-  }
-
-  #options {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
-  #logo-container {
-    position: absolute;
-    top: 20px;
-    left: 170px;
-  }
-
-  #search-container {
-    position: absolute;
-    left: 110px;
-    top: 30px;
-    display: none;
-  }
-
-  .fa-search {
-    font-size: 18px;
-  }
-
   #hamburger {
-    display: block;
+    display: flex;
     position: absolute;
-    left: 30px;
-    font-size: 13px;
-    z-index: 1000;
+    left: 10px;
+    top: 10px;
+    font-size: 25px;
   }
 
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0px;
-    background-color: white;
-    padding: 50px;
-    width: 160px;
-    height: 100vh;
-    z-index: -1;
+  #navlinks {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    left: -250px;
+    text-align: justify;
+    row-gap: 30px;
+    margin: 50px 0;
+    position: absolute;
+    left: -150px;
+    top: 50px;
   }
 
-  nav ul {
+  #skills-ul li {
+    display: none;
+  }
+
+  #navlinks.ul-active {
     display: flex;
-    flex-direction: column;
-    row-gap: 50px;
-    align-items: center;
-    position: absolute;
-    top: 100px;
     left: 20px;
-    z-index: 500;
+    transition: 0.5s linear left;
   }
 
-  #navigation.active-nav {
-    left: 0;
-    transition: left 1s linear;
-  }
-
-  #hamburger.hamburger-menu {
-    position: fixed;
-  }
+  /style for heros-section/
 
   #hero-section {
-    max-height: 100%;
+    position: relative;
+    top: 250px;
   }
 
-  #hero-section #hero-contents h1 {
-    max-width: 70%;
-    font-size: 40px;
+  #hero-section #image-div img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
   }
 
-  #hero-contents p {
-    max-width: 50%;
-    line-height: 1.8;
-  }
-
-  #brands-section #brands-contents h1 {
+  #hero-section h1 {
     font-size: 30px;
   }
 
-  #brands-section #brands-contents p {
-    max-width: 70%;
-    line-height: 1.6;
+  #hero-section {
+    margin-bottom: 300px;
   }
 
-  #fashion-images {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 50px;
+  #hero-section #heading-title h1 {
+    font-size: 35px;
   }
 
-  #casual-section {
-    padding: 0 20%;
+  #hero-section #heading-title h3 {
+    font-size: 25px;
   }
 
-  #bottom-wear {
-    padding: 0 20%;
+  #hero-section p {
+    min-width: 100%;
   }
 
-  #footwear {
-    padding: 0 20%;
+  #hero-section img {
+    display: none;
   }
 
-  footer {
+  /style for about section/
+
+  #about-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(images/business-suit-brain-1920x1080-16430.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+  }
+
+  #about-section p {
+    max-width: 100%;
+    font-size: 12px;
+  }
+
+  #skills-container #skills-about {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  footer #social-links{
-    position: relative;
-    left: 160px;
+  #skills-container #skills-about i {
+    font-size: 50px;
   }
 
-  #copyright{
-display: none;
+  /style for interest section/
+
+  #interest-section article {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  #contact-section form input,
+  textarea {
+    max-width: 300px;
+  }
+
+  form button {
+    width: 300px;
+  }
+
+  #contact-section form {
+    width: 100%;
+  }
+
+  #contact-section h1 {
+    font-size: 25px;
+  }
+
+  #contact-section p {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  address {
+    text-align: center;
   }
 }
